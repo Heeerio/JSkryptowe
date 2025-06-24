@@ -8,6 +8,9 @@ def search_books(keyword):
     return [book for book in books if keyword in book['title'].lower() or keyword in book['author'].lower()]
 
 def reserve_book(user, book_title):
+    books = load_data(BOOKS_FILE)
+    if not any(book['title'].lower() == book_title.lower() for book in books):
+        raise Exception("Nie znaleziono takiej książki w bibliotece.")
     reservations = load_data(RESERVATIONS_FILE)
     for res in reservations:
         if res['book_title'].lower() == book_title.lower():
