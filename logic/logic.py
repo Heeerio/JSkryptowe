@@ -10,9 +10,10 @@ def search_books(keyword):
 
 def reserve_book(user, book_title):
     reservations = load_data(RESERVATIONS_FILE)
-    for res in reservations:
-        if res['book_title'].lower() == book_title.lower():
-            raise Exception("Ta książka jest już zarezerwowana.")
+    #for res in reservations:
+     #  if res['book_title'].lower() == book_title.lower():
+        #    raise Exception("Ta książka jest już zarezerwowana.")
+
 
     new_reservation = {
         "user": user,
@@ -20,7 +21,9 @@ def reserve_book(user, book_title):
         "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
-    reservations.append(new_reservation)
+   # reservations.append(new_reservation)
+   # save_data(RESERVATIONS_FILE, reservations)
+    reservations.append({"user": user, "book_title": book_title})
     save_data(RESERVATIONS_FILE, reservations)
 
 def list_reservations():

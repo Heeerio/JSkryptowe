@@ -7,5 +7,23 @@
         "user": "maciej",
         "book_title": "Metro 2033",
         "date": "2025-06-24 16:00:18"
+    },
+    {
+        "user": "Tomek",
+        "book_title": "Hobbit",
+        "date": "2025-06-24 20:08:03"
+    },
+    {
+        "user": "MIcha\u0142",
+        "book_title": "Duma i uprzedzenie",
+        "date": "2025-06-24 20:10:55"
+    },
+    {
+        "user": "Sebastian",
+        "book_title": "Metro 2033"
+    },
+    {
+        "user": "Karol",
+        "book_title": "Metro 2033"
     }
 ]
